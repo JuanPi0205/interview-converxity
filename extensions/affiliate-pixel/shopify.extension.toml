@@ -1,0 +1,19 @@
+name = "affiliate-pixel"
+type = "web_pixel_extension"
+uid = "a8c27daf-4a0c-7bd4-96a0-311fb5cad2fe91eb4372"
+
+runtime_context = "strict"
+
+[settings]
+type = "object"
+
+[settings.fields.appUrl]
+name = "App URL"
+description = "Backend URL where conversions are reported (e.g. https://my-app.com)"
+type = "single_line_text_field"
+validations = [
+  { name = "min", value = "1" }
+]
+
+[build]
+path = "dist/affiliate-pixel.js"
